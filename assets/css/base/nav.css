@@ -28,7 +28,7 @@
 
 .nav__contact { @apply mt-auto xl:hidden }
 .nav__contact li + li { @apply mt-[.6rem] }
-.nav__contact a { @apply flex items-center relative gap-3 no-underline font-bold text-lg }
+.nav__contact a { @apply flex items-center relative gap-3 no-underline font-bold text-base sm:text-lg }
 .nav__contact a:active, .nav__contact a:focus, .nav__contact a:hover { @apply text-lime }
 .nav__contact a span, .nav__group__subitem span { @apply flex justify-center items-center h-9 w-9 rounded-full bg-lime relative }
 .nav__contact a svg, .nav__group__subitem svg { @apply h-5 w-5 fill-transparent stroke-green-dark }
