@@ -1,0 +1,20 @@
+.button { @apply border-none rounded-full inline-block text-base leading-[3.5rem] font-medium outline-none relative text-left pl-5 pr-14 no-underline whitespace-nowrap z-10 transition duration-300 ease-in-out min-w-[14.25rem] xl:min-w-[14.125rem] }
+.button::before { @apply content-[''] rounded-full absolute h-[2.625rem] w-[2.625rem] right-[7px] top-[7px] -z-10 transition-all duration-300 ease-in-out }
+
+/* Variants */
+.button.lime { @apply bg-lime text-green-dark }
+.button.lime:active, .button.lime:focus, .button.lime:hover { @apply bg-green-dark text-white shadow-lime }
+.button.lime::before { @apply bg-green-dark }
+.button.lime:active::before, .button.lime:focus::before, .button.lime:hover::before { @apply bg-lime }
+.button.lime svg { @apply fill-none stroke-white }
+.button.lime:active svg, .button.lime:focus svg, .button.lime:hover svg { @apply stroke-green-dark }
+
+/* Icons */
+.button svg { top: calc(50% - .5rem); @apply absolute h-4 w-4 right-5 }
+
+/* Mods */
+.button--next:active svg, .button--next:focus svg, .button--next:hover svg { @apply animate-bounce-right }
+.button--external:active svg, .button--external:focus svg, .button--external:hover svg { @apply animate-bounce-right-top }
+
+/* Disabled */
+.button:disabled, .button.disabled { @apply cursor-not-allowed opacity-50 }

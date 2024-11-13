@@ -1,0 +1,44 @@
+/* Button */
+.nav__button { @apply bg-white text-green-dark rounded-xl h-12 w-[8.125rem] p-[6px] flex flex-row-reverse items-center justify-between relative -mt-1 transition-all duration-500 delay-0 ease-in-out xl:hidden }
+.nav__button.open { @apply rounded-b-none delay-150 }
+
+.nav__button::before, .nav__button::after { @apply content-[''] opacity-0 absolute transition-all ease-in-out }
+
+.nav__button::before { @apply bg-white rounded-xl h-full left-0 right-0 bottom-0 duration-300 delay-0 }
+.nav__button.open::before { @apply rounded-b-none -bottom-4 opacity-100 delay-[150ms] }
+
+.nav__button::after { box-shadow: 10px 10px 0 0 theme('colors.white'); @apply bg-transparent rounded-br-[50%] h-[43px] w-[43px] left-[-43px] -bottom-4 translate-x-4 duration-75 delay-0 }
+.nav__button.open::after { @apply opacity-100 translate-x-0 delay-[280ms] }
+
+.nav__button__burger { @apply bg-lime group-active:bg-green-dark group-focus:bg-green-dark group-hover:bg-green-dark inline-block rounded-full h-9 w-9 relative transition-all duration-500 ease-in-out }
+.nav__button__burger span { @apply w-[11px] h-0.5 bg-current group-active:bg-lime group-focus:bg-lime group-hover:bg-lime rounded-lg absolute left-[12.5px] transition-all duration-500 ease-in-out }
+.nav__button__burger span.top { @apply top-[15px] }
+.open .nav__button__burger span.top { @apply rotate-45 translate-y-[.12rem] }
+.nav__button__burger span.bottom { @apply bottom-[15px] }
+.open .nav__button__burger span.bottom { @apply -rotate-45 translate-y-[-.12rem] }
+
+.nav__button__label { @apply font-medium pl-4 relative z-10 }
+
+/* Menu */
+.nav a { @apply inline-block font-bold text-xl leading-[2.22] no-underline text-green-dark }
+.nav a:active, .nav a:focus, .nav a:hover { @apply text-lime }
+.nav .link-external svg { @apply top-[1em] }
+
+.nav a.nav__group__subitem { @apply hidden }
+
+.nav__contact { @apply mt-auto xl:hidden }
+.nav__contact li + li { @apply mt-[.6rem] }
+.nav__contact a { @apply flex items-center relative gap-3 no-underline font-bold text-lg }
+.nav__contact a:active, .nav__contact a:focus, .nav__contact a:hover { @apply text-lime }
+.nav__contact a span, .nav__group__subitem span { @apply flex justify-center items-center h-9 w-9 rounded-full bg-lime relative }
+.nav__contact a svg, .nav__group__subitem svg { @apply h-5 w-5 fill-transparent stroke-green-dark }
+
+@screen xl {
+	.nav ul { @apply flex items-center }
+	.nav a { @apply text-white font-medium text-base leading-relaxed px-[1.62rem] }
+	.nav .link-external svg { @apply top-[.45em] right-[.8rem] stroke-lime h-[.4rem] w-[.4rem] }
+
+	.nav__group { @apply border border-green-light/30 border-solid rounded-xl p-[.4rem] flex justify-between items-center gap-8 ml-8 }
+	.nav .nav__group a { @apply px-4}
+	.nav a.nav__group__subitem { @apply inline-block px-0 }
+}
