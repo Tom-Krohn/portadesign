@@ -1,7 +1,7 @@
 .header { @apply fixed top-0 left-0 right-0 z-50 }
 .header::before { @apply bg-green-dark border-b border-solid border-green-light/20 content-[''] absolute bottom-0 top-0 w-full max-w-screen-4xl left-1/2 -translate-x-1/2 opacity-0 transition-all ease-in-out duration-500 }
 
-.header__domains { @apply border-b border-solid border-green-light/20 transition-all ease-in-out duration-500 }
+.header__domains { @apply border-b border-solid border-green-light/20 transition-all ease-in-out duration-500 relative max-w-screen-4xl left-1/2 -translate-x-1/2 }
 .header__domains ul { @apply flex gap-9 xl:gap-8 }
 .header__domains a { @apply inline-block text-green-light no-underline text-sm leading-[2.875rem] xl:leading-[2.75rem] relative }
 .header__domains a:active, .header__domains a:focus, .header__domains a:hover { @apply text-lime }
@@ -14,7 +14,7 @@
 .header__logo a { @apply inline-block no-underline }
 .header__logo img { @apply block h-[33px] xl:h-10 }
 
-.header__nav { top: calc(100% + 1rem); @apply bg-white rounded-xl rounded-tr-none text-green-dark pointer-events-none absolute h-0 overflow-hidden left-0 right-0 transition-all ease-in-out duration-500 -translate-y-8 opacity-0 px-8 pt-5 pb-7 flex flex-col max-h-[48rem] }    
+.header__nav { top: calc(100% + 1rem); @apply bg-white rounded-xl rounded-tr-none text-green-dark pointer-events-none absolute h-0 overflow-hidden left-0 right-0 transition-all ease-in-out duration-500 -translate-y-8 opacity-0 px-6 sm:px-8 pt-5 pb-7 flex flex-col max-h-[48rem] }    
 .header__nav.open { height: calc(100dvh - 9.5rem); @apply pointer-events-auto translate-y-0 opacity-100 }
 
 /* Fixed */
